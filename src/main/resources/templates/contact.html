@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>contact page</title>
+</head>
+<body>
+    <h1>Contact info</h1>
+
+
+    <form method="post" th:action="@{/contact}">
+        <input type="text" id="new address" name="new address" value="" placeholder="Enter your contact details here"/>
+        <input type="submit" value="submit"/>
+    </form>
+    <div th:if="${strings.isEmpty()}">
+        <p>Add some strings</p>
+    </div>
+    <ul th:each="string : ${strings}">
+
+
+    </ul>
+</body>
+</html>
